@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-vector<int> heapify(vector<int> &a){
+vector<int> makeMaxHeap(vector<int> &a){
     vector<int> b;
     int n = a.size();
     for(int i=0; i<n; i++){
@@ -18,7 +18,7 @@ vector<int> heapify(vector<int> &a){
 }
 void heapsort(vector<int> &a){
     int n = a.size();
-    a = heapify(a);
+    a = makeMaxHeap(a);
     int free = n-1;
     while(free>=0){
         swap(a[0], a[free]);
