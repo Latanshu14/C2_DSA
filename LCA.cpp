@@ -71,8 +71,8 @@ int main(){
         for(int i=1; i<=n; i++){
             par[i][0] = parent[i];
         }
-        for(int i=1; i<=n; i++){
-            for(int j=1; j<22; j++){
+        for(int j=1; j<=21; j++){
+            for(int i=1; i<=n; i++){
                 if(par[i][j-1]!=-1){
                     par[i][j] = par[par[i][j-1]][j-1];
                 }
